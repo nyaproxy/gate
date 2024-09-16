@@ -286,6 +286,7 @@ func validateConfig(log logr.Logger, c *config.Config) error {
 		log.Info("config validation error", "error", e)
 	}
 	for _, w := range warns {
+		return fmt.Errorf("config validation failed")
 		log.Info("config validation warn", "warn", w)
 	}
 	if len(errs) != 0 {
