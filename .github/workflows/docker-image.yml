@@ -34,4 +34,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_REPO }}/${{ secrets.DOCKERHUB_IMG }}:Gate
+          tags: ${{ secrets.DOCKERHUB_REPO }}/${{ secrets.DOCKERHUB_IMG }}:${{ secrets.DOCKERHUB_VER }}
